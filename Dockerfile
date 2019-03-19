@@ -15,4 +15,6 @@ RUN apt-get update \
     && apt-get install -y  matchbox twm \
 && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 
-CMD [ "teamviewer", "daemon", "start" ]
+# CMD [ "teamviewer", "daemon", "start" ]
+
+CMD sudo service teamviewer daemon start && teamviewer
