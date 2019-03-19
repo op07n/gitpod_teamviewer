@@ -15,4 +15,4 @@ RUN apt-get update \
     && apt-get install -y  matchbox twm \
 && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 
-RUN teamviewer daemon start
+CMD [ "teamviewer", "daemon", "start" ]
